@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Merriweather&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather", serif;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+  height: 100vh;
+  width: 250px;
+  transition: all 0.5s linear;
+  color: #fff;
+}
+
+.side-menu side-links .side-header h1 {
+  font-size: 25px;
+}
+
+.side-links {
+  padding: 10px 0;
+  transition: background-color 0.2s;
+}
+
+.side-links a,
+.side-links i {
+  color: #fff;
+  text-decoration: none;
+}
+
+.side-links:hover {
+  background-color: darkorange;
+}
+
+.side-links:hover a,
+.side-links:hover i {
+  color: #fff;
+}
+
+.side-header span {
+  color: darkorange;
+}
+
+.side-bar {
+  border: 1px solid #fff;
+}
+
+.dash-menu a {
+  color: #fff;
+}
+
+.logout {
+  position: absolute;
+  left: 80px;
+  bottom: 0;
+}
+
+/* Content */
+.content-container {
+  background-color: #ebe9e9;
+}
+
+.header-box {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+/* Cards */
+.card-container {
+  background: #fff;
+  border-radius: 10px;
+}
+
+.cardcontent-box {
+  background: #ebe9e9;
+  border-radius: 10px;
+  width: 300px;
+  height: 150px;
+  transition: all 0.5s ease-in-out;
+}
+
+.card-title {
+  font-size: 16px;
+}
+
+.user-count {
+  font-size: 25px;
+}
+
+.icon {
+  font-size: 25px;
+  border-radius: 50%;
+  background: darkorange;
+  width: 50px;
+  height: 50px;
+}
+
+/* Order */
+.table-container {
+  width: 100%;
+}
+
+.menu-img {
+  width: 100px;
+}
+
+/* Admin menu dashboard */
+.update-delete {
+  width: 100px;
+}

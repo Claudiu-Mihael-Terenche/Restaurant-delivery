@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Merriweather&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", serif;
+  text-transform: capitalize;
+}
+
+/* Navbar Section*/
+.navbar {
+  position: sticky;
+  top: 0;
+}
+
+.navbar-logo {
+  color: aliceblue;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.navbar-logo span {
+  color: darkorange;
+}
+
+.nav-link {
+  font-size: 18px;
+}
+
+.nav-item a {
+  font-size: 16px;
+}
+
+/* Header Section*/
+.container-1 {
+  background-image: url("../image/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: aliceblue;
+}
+
+.container-1-item h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 100px;
+}
+
+.container-1-item button {
+  width: 200px;
+  height: 50px;
+}
+
+.container-1-item button a {
+  text-decoration: none;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.menu-container img {
+  width: 30%;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Style for the dropdown menu in Header */
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropbtn {
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 999999;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 5px;
+  background-color: aliceblue;
+  min-width: 200px;
+  z-index: 99999;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  font-size: 14px;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  color: #333;
+  transition: background-color 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+  color: #ccc;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Gallery Section */
+.gallery-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 10px;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.gallery-item {
+  flex: 0 0 calc(33.33% - 20px);
+  scroll-snap-align: start;
+}
+
+.gallery-item img {
+  width: 100%;
+  object-fit: fill;
+  height: 500px;
+}
+
+/* About Us Section*/
+.container-3 {
+  background-color: rgb(12, 12, 12);
+}
+
+.container-3 {
+  width: 100%;
+  height: 600px;
+  margin-top: 20px;
+  overflow-y: scroll;
+}
+
+.aboutus-container h2 {
+  color: aliceblue;
+  margin-top: 40px;
+}
+
+.aboutus-container h3 {
+  color: aliceblue;
+  margin: 20px;
+}
+
+.aboutus-container p {
+  color: aliceblue;
+  margin: 20px;
+  font-size: 18px;
+}
+
+.image-container img {
+  width: 90%;
+}
+
+.image-container .img-1 {
+  width: 60%;
+}
+
+/* Contact Us Section*/
+.contact-container .contact-item {
+  position: relative;
+  width: 100%;
+}
+
+.contact-container .contact-item input,
+.contact-container .contact-item textarea {
+  width: 100%;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+}
+
+.contact-container .contact-item textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-container .contact-item span {
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #000;
+}
+
+.contact-container .contact-item input:focus ~ span,
+.contact-container .contact-item input:valid ~ span,
+.contact-container .contact-item textarea:focus ~ span,
+.contact-container .contact-item textarea:valid ~ span {
+  color: #666;
+  transform: translateY(-15px);
+}
+
+.contact-container .contact-item input[type="submit"] {
+  border: none;
+  background: darkorange;
+  cursor: pointer;
+  width: 100px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Back to top Icon */
+.top a {
+  position: fixed;
+  bottom: 60px;
+  right: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  padding: 20px;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+}
+
+.top .bi-arrow-up {
+  color: darkorange;
+  font-size: 20px;
+  transition: 0.2 ease-out;
+  font-weight: 800;
+}
+
+.top a:hover {
+  background-color: #666;
+}
+
+.top a:hover span {
+  transform: translateY(-4px);
+}
+
+/* Edit Profile */
+
+.profile-container {
+  width: 40%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #eee;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.changes {
+  position: relative;
+  right: 0;
+}

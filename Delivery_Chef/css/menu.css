@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Merriweather&display=swap");
+
+* {
+  font-family: "Merriweather", serif;
+}
+/* Admin Edit menu */
+
+/* Add to cart */
+.shopping {
+  position: relative;
+  text-align: right;
+}
+
+.shopping img {
+  background: #000;
+  width: 50px;
+  height: 50px;
+}
+
+.shopping span {
+  background: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  top: -5px;
+  left: 80%;
+  padding: 3px 10px;
+}
+
+/* Filter categories */
+.container-1-item li {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.container-1-item h2 {
+  text-decoration: underline;
+}
+
+.container-1-item .category-btn {
+  width: 150px;
+}
+
+.container-1-item .category-btn a {
+  text-decoration: none;
+}
+
+.container-1-item .category-btn:hover {
+  background-color: #333;
+}
+
+.container-1-item .category-btn:hover a {
+  color: #f8f8f8;
+}
+
+/* Single page menuItem.php */
+.container {
+  height: 85vh;
+}
+
+.menu-item-box .img-box img {
+  width: auto;
+  height: 720px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.menu-item-content {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.menu-item-content h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 75px;
+}
+
+/* Menu Card menu.php */
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-top: 50px;
+}
+
+.list .item {
+  text-align: center;
+  background-color: #dce0e1;
+  padding: 20px;
+  height: auto;
+  box-shadow: 0 50px 50px #757676;
+  position: relative;
+}
+
+.list .item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.list .item .title a {
+  font-size: 25px;
+  font-family: "Dancing Script", cursive;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+}
+
+.list .item .price {
+  margin: 10px;
+}
+
+.list .item button {
+  background-color: #1c1f25;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+}
+
+.list .item .add-to-cart-form {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.add-to-cart-form .add-btn:hover {
+  background-color: goldenrod;
+  color: black;
+  border: 2px solid goldenrod;
+}

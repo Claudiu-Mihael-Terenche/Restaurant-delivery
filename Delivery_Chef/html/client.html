@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User_account</title>
+    <link rel="stylesheet" href="../css/user_account.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md py-4">
+      <div class="container-fluid">
+        <a class="navbar-logo px-3" href="index.html"
+          >Delivery<span>Chef</span></a
+        >
+      </div>
+      <div class="dropdown navbar-nav ms-auto">
+        <button class="dropbtn mx-4">Profile</button>
+        <div class="dropdown-content">
+          <a href="client.html">My Profile</a>
+          <a href="logout.html">Logout</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container light-style flex-grow-1 container-p-y">
+      <h4 class="font-weight-bold py-3 mb-4">Account settings</h4>
+      <div class="card overflow-hidden">
+        <div class="row no-gutters row-bordered row-border-light">
+          <!-- Side Bar Options -->
+          <div class="col-md-3 pt-0">
+            <div class="list-group list-group-flush account-settings-links">
+              <a
+                class="list-group-item list-group-item-action active"
+                data-toggle="list"
+                href="#account-profile"
+                >Contacts Info</a
+              >
+              <a
+                class="list-group-item list-group-item-action"
+                data-toggle="list"
+                href="#account-change-password"
+                >Change password</a
+              >
+              <a
+                class="list-group-item list-group-item-action"
+                data-toggle="list"
+                href="#account-orders"
+                >Orders</a
+              >
+              <a
+                class="list-group-item list-group-item-action"
+                data-toggle="list"
+                href="#account-delete-account"
+                >Delete account</a
+              >
+            </div>
+          </div>
+
+          <!-- To edit -->
+          <div class="col-md-9">
+            <div class="tab-content">
+              <!-- My Profile -->
+              <div class="tab-pane fade active show" id="account-profile">
+                <hr class="border-light m-0" />
+                <form method="POST" action="">
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label class="form-label">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        value=""
+                        name="user_name"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Email</label>
+                      <input
+                        type="text"
+                        class="form-control mb-1"
+                        value=""
+                        name="user_email"
+                        read-only
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label">Birthday</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        value=""
+                        placeholder="YYYY-MM-DD"
+                        name="user_dob"
+                      />
+                    </div>
+                  </div>
+                  <hr class="border-light m-0" />
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label class="form-label">Phone</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        value=""
+                        name="user_phone"
+                      />
+                      <div class="form-group">
+                        <label class="form-label">Address</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          value=""
+                          name="user_address"
+                        />
+                      </div>
+                      <div class="text-right mt-3">
+                        <button type="button" class="btn btn-primary">
+                          Save changes
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Change Password -->
+              <div class="tab-pane fade" id="account-change-password">
+                <div class="card-body pb-2">
+                  <form method="POST" action="">
+                    <div class="form-group">
+                      <label class="form-label">Current password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="user_password"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">New password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="user_newPassword"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Repeat new password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="user_newPassword"
+                      />
+                    </div>
+
+                    <div class="text-right mt-3">
+                      <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Delete Account -->
+              <?= require_once "deleteAccount.php" ?>
+              <div class="tab-pane fade" id="account-delete-account">
+                <hr class="border-light m-0" />
+                <form method="post" action="">
+                  <span><?= $errorMessages ?></span>
+                  <div class="card-body">
+                    <h5 class="font-weight-bold mb-3">DELETE ACCOUNT</h5>
+                    <div class="form-group">
+                      <label class="form-label">Confirm Password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="pwd_deleteAccount"
+                      />
+                    </div>
+
+                    <div class="text-right mt-3">
+                      <button
+                        type="submit"
+                        class="btn btn-danger"
+                        name="submit"
+                      >
+                        Delete Account
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Merriweather&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", serif;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+}
+
+.navbar-logo {
+  color: aliceblue;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.navbar-logo span {
+  color: darkorange;
+}
+
+/* Login-Register */
+.login-register-container {
+  height: 90vh;
+  width: 100%;
+  background: url("../image/background.jpg");
+  background-size: cover;
+}
+
+.form-box {
+  width: 450px;
+  height: 550px;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  padding: 5px;
+  border: 1px solid #000;
+}
+
+.input-group {
+  width: 280px;
+  transition: 0.5s;
+}
+
+.input-box .input-field {
+  width: 300px;
+  margin: 10px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid aliceblue;
+  outline: none;
+  background: transparent;
+  position: relative;
+  color: #fff;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  color: #666;
+  transform: translateY(-20px);
+}
+
+.input-box label {
+  position: absolute;
+  left: 5px;
+  pointer-events: none;
+  transition: 0.5s;
+  color: aliceblue;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 5px;
+  transition: 0.5s;
+  color: aliceblue;
+}
+
+.submit-btn {
+  width: 60%;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  /* background-color: darkorange; */
+}
+
+.check-box {
+  margin-right: 5px;
+  bottom: 68px;
+}
+
+a,
+p {
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.term-text {
+  font-size: 11px;
+}
+
+.remember-text {
+  font-size: 11px;
+}
+
+.error-msg {
+  color: red;
+  font-size: 14px;
+}
